@@ -1,5 +1,6 @@
 #include <stdio.h>
-void main()
+int main()
 {
   printf("Write test");
+  return 0;
 }
