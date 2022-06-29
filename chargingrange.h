@@ -18,3 +18,8 @@ using namespace std;
 int detectRangeCount(vector<int> chargingSessionSamples, int lowerBound, int upperBound);
 int getNumberofReadingsInRange(vector<int> chargingSessionSamples, int lowerBound, int upperBound);
 void printInConsole(int lowerBound, int upperBound,int readingCount);
+
+//Test Driven Extension
+int  convert12BitSensorToAmps(int bitValues)
+int  convert10BitSensorToAmps(int bitValues)
+ 
