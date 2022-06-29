@@ -5,5 +5,6 @@ int main()
 {
    TestTDDStepFunctionNotDeclared();
    TestTDDStepNoFunctionDefinition();
+   TestCurrentRange();
 
 }
