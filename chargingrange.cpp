@@ -45,9 +45,9 @@ int convert10BitSensorToAmps(int bitValues)
   {
     return ERROR_READING ;
   }
-  double convertedAmps = round( ( float(bitValues) * TOTAL_CURRENT_AMPS_10BIT  ) / MAXIMUM_A2D_NUMBERS_10BIT   );
+  double convertedAmps = round( ( (float(bitValues) * TOTAL_CURRENT_AMPS_10BIT) / MAXIMUM_A2D_NUMBERS_10BIT ) - 15  ); // -15 Because Range is -15 to +15
     cout << " convert10BitSensorToAmps convertedAmps" << convertedAmps << endl;
-  double getPositiveAmps = abs(convertedAmps - MAXIMUM_CURRENT_AMPS_10BIT) ;
+  double getPositiveAmps = abs(convertedAmps) ;
       cout << " convert10BitSensorToAmps getPositiveAmps " << getPositiveAmps << endl;
 
   return getPositiveAmps;
