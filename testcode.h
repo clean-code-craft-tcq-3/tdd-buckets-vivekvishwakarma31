@@ -1,7 +1,5 @@
-#ifndef TESTCODE_H
-#define TESTCODE_H
-#include "chargingrange.h"
 
+#include "chargingrange.h"
 
 //TEST CASE #1: Write only the test code without the actual definition in souce file
 void TestTDDStepFunctionNotDeclared()
@@ -16,4 +14,4 @@ void TestTDDStepNoFunctionDefinition()
    vector <int> chargingSessionSamples = {3, 3, 5, 4, 10, 11, 12};   
    REQUIRE(getNumberofReadingsInRange(chargingSessionSamples, 3, 5) == 4);
 }
-#endif
+
