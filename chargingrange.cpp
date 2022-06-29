@@ -34,7 +34,7 @@ int convert12BitSensorToAmps(int bitValues)
   {
     return ERROR_READING ;
   }
-  double convertedAmps = round( (bitValues * MAXIMUM_CURRENT_AMPS_12BIT ) / MAXIMUM_A2D_NUMBERS_12BIT  );
+  double convertedAmps = round( ( float(bitValues) * MAXIMUM_CURRENT_AMPS_12BIT ) / MAXIMUM_A2D_NUMBERS_12BIT  );
   return convertedAmps;
 }
 
@@ -45,7 +45,7 @@ int convert10BitSensorToAmps(int bitValues)
   {
     return ERROR_READING ;
   }
-  double convertedAmps = round( (bitValues * TOTAL_CURRENT_AMPS_10BIT  ) / MAXIMUM_A2D_NUMBERS_10BIT   );
+  double convertedAmps = round( ( float(bitValues) * TOTAL_CURRENT_AMPS_10BIT  ) / MAXIMUM_A2D_NUMBERS_10BIT   );
     cout << " convert10BitSensorToAmps convertedAmps" << convertedAmps << endl;
   double getPositiveAmps = abs(convertedAmps - MAXIMUM_CURRENT_AMPS_10BIT) ;
       cout << " convert10BitSensorToAmps getPositiveAmps " << getPositiveAmps << endl;
