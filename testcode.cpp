@@ -2,18 +2,11 @@
 
 #include "test/catch.hpp"
 
-#include "chargingrange.h"
+#include "testcode.h"
 
-//TEST CASE #1: Write only the test code without the actual definition in souce file
-TEST_CASE("test- Function Not Declared") 
+int main()
 {
-   vector <int> chargingSessionSamples = {3, 3, 5, 4, 10, 11, 12};   
-   REQUIRE(getNumberofReadingsInRange(chargingSessionSamples, 3, 5) == 4);
-}
+   TestTDDStepFunctionNotDeclared();
+   TestTDDStepNoFunctionDefinition();
 
-//TEST CASE #2: Declare Function in source file, so test will fail because definition is not present
-TEST_CASE("test- NO Definition Failed Result")
-{
-   vector <int> chargingSessionSamples = {3, 3, 5, 4, 10, 11, 12};   
-   REQUIRE(getNumberofReadingsInRange(chargingSessionSamples, 3, 5) == 4);
 }
