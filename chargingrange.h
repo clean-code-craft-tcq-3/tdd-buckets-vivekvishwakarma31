@@ -20,6 +20,6 @@ int getNumberofReadingsInRange(vector<int> chargingSessionSamples, int lowerBoun
 void printInConsole(int lowerBound, int upperBound,int readingCount);
 
 //Test Driven Extension
-int  convert12BitSensorToAmps(int bitValues)
-int  convert10BitSensorToAmps(int bitValues)
+int  convert12BitSensorToAmps(int bitValues);
+int  convert10BitSensorToAmps(int bitValues);
  
