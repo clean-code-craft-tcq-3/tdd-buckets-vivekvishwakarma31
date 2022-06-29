@@ -12,6 +12,6 @@ void TestTDDStepFunctionNotDeclared()
 void TestTDDStepNoFunctionDefinition()
 {
    vector <int> chargingSessionSamples = {3, 3, 5, 4, 10, 11, 12};   
-   REQUIRE(getNumberofReadingsInRange(chargingSessionSamples, 3, 5) == 4);
+   assert(getNumberofReadingsInRange(chargingSessionSamples, 3, 5) == 4);
 }
 
