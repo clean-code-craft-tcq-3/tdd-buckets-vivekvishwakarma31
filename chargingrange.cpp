@@ -40,11 +40,15 @@ int convert12BitSensorToAmps(int bitValues)
 
 int convert10BitSensorToAmps(int bitValues)
 {
+  printf(" convert10BitSensorToAmps bitValues : %d ",bitValues);
   if(bitValues == ERROR_READING_10BIT)
   {
     return ERROR_READING ;
   }
   double convertedAmps = round( (bitValues * TOTAL_CURRENT_AMPS_10BIT  ) / MAXIMUM_A2D_NUMBERS_10BIT   );
+    printf(" convert10BitSensorToAmps convertedAmps : %f ",convertedAmps);
   double getPositiveAmps = abs(convertedAmps - MAXIMUM_CURRENT_AMPS_10BIT) ;
+      printf(" convert10BitSensorToAmps getPositiveAmps : %f ",getPositiveAmps);
+
   return getPositiveAmps;
 }
