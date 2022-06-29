@@ -15,7 +15,8 @@ void printInConsole(int lowerBound, int upperBound,int readingCount)
 int detectRangeCount(vector<int> chargingSessionSamples, int lowerBound, int upperBound)
 {
     int countOfReadingsFromRange = 0;
-    for(int i = 0; i < chargingSessionSamples.size(); i++) 
+    int sizeofChargingSessionSamples = chargingSessionSamples.size();
+    for(int i = 0; i < sizeofChargingSessionSamples; i++) 
     {
       if((chargingSessionSamples[i] >= lowerBound) && (chargingSessionSamples[i] <= upperBound))
       {
