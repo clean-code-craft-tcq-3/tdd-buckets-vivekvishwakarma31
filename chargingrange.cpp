@@ -2,7 +2,6 @@
 
 int getNumberofReadingsInRange(vector<int> chargingSessionSamples, int lowerBound, int upperBound) 
 {
-  int sizeofChargingSessionSamples = chargingSessionSamples.size();
   int rangeReadingCount = detectRangeCount(chargingSessionSamples,lowerBound,upperBound);
   printInConsole(lowerBound, upperBound,rangeReadingCount);
   return rangeReadingCount;  
