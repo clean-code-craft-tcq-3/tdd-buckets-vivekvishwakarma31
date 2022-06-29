@@ -58,3 +58,48 @@ void TestReadingforOutofRangeSamples()
    assert(getNumberofReadingsInRange(chargingSessionSamples, 3, 5) == 0);
    assert(getNumberofReadingsInRange(chargingSessionSamples, 10, 12) == 0);
 }
+
+// Test Driven Extensions
+void Test12BitConversion()
+{
+  int convertedAmp = 0;
+  convertedAmp = convert12BitSensorToAmps(0);
+  assert(convertedAmp == 0);
+  convertedAmp = convert12BitSensorToAmps(4094);
+  assert(convertedAmp == 10);
+  convertedAmp = convert12BitSensorToAmps(512);
+  assert(convertedAmp == 1);
+  convertedAmp = convert12BitSensorToAmps(1024);
+  assert(convertedAmp == 2);
+  convertedAmp = convert12BitSensorToAmps(2048);
+  assert(convertedAmp == 5);
+  convertedAmp = convert12BitSensorToAmps(3000);
+  assert(convertedAmp == 7);
+}
+
+void Test10BitConversion()
+{
+  int convertedAmp = 0;
+  convertedAmp = convert10BitSensorToAmps(0);
+  assert(convertedAmp == 15);
+  convertedAmp = convert10BitSensorToAmps(1022);
+  assert(convertedAmp == 15);
+  convertedAmp = convert10BitSensorToAmps(300);
+  assert(convertedAmp == 6);
+  convertedAmp = convert10BitSensorToAmps(511);
+  assert(convertedAmp == 0);
+  convertedAmp = convert10BitSensorToAmps(950);
+  assert(convertedAmp == 13);
+  convertedAmp = convert10BitSensorToAmps(10);
+  assert(convertedAmp == 14);
+}
+
+void TestIgnoreErrorReadings()
+{
+     int convertedAmp = 0;
+     convertedAmp = convert12BitSensorToAmps(ERROR_READING_12BIT);
+     assert(convertedAmp == ERROR_READING_12BIT);
+   
+     convertedAmp = convert12BitSensorToAmps(ERROR_READING_10BIT);
+     assert(convertedAmp == ERROR_READING_10BIT);
+}
