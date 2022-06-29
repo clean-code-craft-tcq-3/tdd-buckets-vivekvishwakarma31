@@ -2,6 +2,7 @@
 #include<string>
 #include <vector>
 #include <assert.h>
+#include <cmath>
 
 #define ERROR_READING 0xFFFF
 #define MAXIMUM_CURRENT_AMPS_12BIT 10
