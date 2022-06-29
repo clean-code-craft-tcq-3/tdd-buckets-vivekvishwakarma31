@@ -97,6 +97,6 @@ void TestIgnoreErrorReadings()
      convertedAmp = convert12BitSensorToAmps(4095);
      assert(convertedAmp == ERROR_READING);
    
-     convertedAmp = convert12BitSensorToAmps(1023);
+     convertedAmp = convert10BitSensorToAmps(1023);
      assert(convertedAmp == ERROR_READING);
 }
