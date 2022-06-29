@@ -67,7 +67,7 @@ void Test12BitConversion()
   convertedAmp = convert12BitSensorToAmps(512);
   assert(convertedAmp == 1);
   convertedAmp = convert12BitSensorToAmps(1024);
-  assert(convertedAmp == 2);
+  assert(convertedAmp == 3);
   convertedAmp = convert12BitSensorToAmps(2048);
   assert(convertedAmp == 5);
   convertedAmp = convert12BitSensorToAmps(3000);
