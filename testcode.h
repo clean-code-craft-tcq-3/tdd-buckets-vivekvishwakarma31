@@ -88,7 +88,7 @@ void Test10BitConversion()
   convertedAmp = convert10BitSensorToAmps(950);
   assert(convertedAmp == 13);
   convertedAmp = convert10BitSensorToAmps(10);
-  assert(convertedAmp == 12);
+  assert(convertedAmp == 15);
 }
 
 void TestIgnoreErrorReadings()
