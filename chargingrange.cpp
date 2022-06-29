@@ -25,3 +25,18 @@ int detectRangeCount(vector<int> chargingSessionSamples, int lowerBound, int upp
     } 
    return countOfReadingsFromRange;
 }
+
+//Test Driven Extension
+
+int convert12BitSensorToAmps(int bitValues)
+{
+  double convertedAmps = round( (bitValues * MAXIMUM_CURRENT_AMPS_12BIT ) / MAXIMUM_A2D_NUMBERS_12BIT  );
+  return convertedAmps;
+}
+
+int convert10BitSensorToAmps(int bitValues)
+{
+  double convertedAmps = round( (bitValues * TOTAL_CURRENT_AMPS_10BIT  ) / MAXIMUM_A2D_NUMBERS_10BIT   );
+  double getPositiveAmps = abs(convertedAmps - MAXIMUM_CURRENT_AMPS_10BIT) ;
+  return getPositiveAmps;
+}
