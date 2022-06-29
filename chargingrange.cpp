@@ -1,6 +1,5 @@
 #include "chargingrange.h"
 
-using namespace std;
 int getNumberofReadingsInRange(vector<int> chargingSessionSamples, int lowerBound, int upperBound) 
 {
   int sizeofChargingSessionSamples = chargingSessionSamples.size();
