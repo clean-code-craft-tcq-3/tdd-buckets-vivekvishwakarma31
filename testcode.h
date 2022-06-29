@@ -19,9 +19,6 @@ void TestTDDStepNoFunctionDefinition()
 void TestCurrentRange()
 {
    vector <int> chargingSessionSamples_1 = {3, 3, 5, 4, 10, 11, 12};
-   vector <int> chargingSessionSamples_2 = {5, 4, 10, 11};
-   vector <int> chargingSessionSamples_3 = {3,10};
-   vector <int> chargingSessionSamples_4;
 
    //Test 3-5 Current Range Where 3- Lower Bound, 5 - Upper Bound
     assert(getNumberofReadingsInRange(chargingSessionSamples_1, 3, 5) == 4);
@@ -34,8 +31,8 @@ void TestCurrentRange()
 void TestReadingForEmptySamples()
 {
    vector <int> chargingSessionSamples = {};
-   assert(getNumberofReadingsInRange(chargingSessionSamples_4, 3, 5) == 0);
-   assert(getNumberofReadingsInRange(chargingSessionSamples_4, 10, 12) == 0);
+   assert(getNumberofReadingsInRange(chargingSessionSamples, 3, 5) == 0);
+   assert(getNumberofReadingsInRange(chargingSessionSamples, 10, 12) == 0);
 }
 void TestReadingForSingleSample()
 {
